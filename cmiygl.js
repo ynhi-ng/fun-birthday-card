@@ -11,7 +11,7 @@ const CARD = {
   message:
     "Congratulations, you can now say things like `back in my day`. Use this power responsibly.\n\nThis license certifies that you are cleared for another year of BLESS(ED) and LEMONHEAD-level adventures.\n\nThanks for always being there and for putting up with me. Here's to another year of chasing what makes you happy and doing it your own way.\n\nHappy birthday! Keep the sparks! Keep going!",
   closer: "This license grants full freedom to wander, cause chaos, and get lost on purpose.",
-  heroPhoto: "public/photos/pic7.JPG",
+  heroPhoto: "public/photos/pic9.JPG",
   music: "public/music.mp3",
   sfx: {
     start: "public/sfx/stamp.wav",
