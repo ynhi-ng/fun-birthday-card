@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owen // Call Me If You Get Famous</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Courier+Prime:wght@400;700&family=Libre+Franklin:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="cmiygl.css" />
+  </head>
+  <body>
+    <div class="paper" aria-hidden="true">
+      <div class="wash"></div>
+      <div class="stars-scatter"></div>
+    </div>
+
+    <button type="button" class="mute hidden" id="mute" aria-label="Mute music">
+      Sound on
+    </button>
+
+    <main class="deck locked" id="deck">
+      <section class="hero" id="hero">
+        <p class="eyebrow">OFFICIAL DROP · TRACK 23</p>
+        <h1 class="brand" id="brand-name">Owen</h1>
+        <p class="headline" id="headline">PERMANENT LICENSE TO EXPLORE</p>
+        <p class="tagline" id="tagline">
+          Valid for bac xiu, chaos, and full JUGGERNAUT energy.
+        </p>
+
+        <article class="license" id="license" aria-label="Permanent license to explore">
+          <div class="license-stars" aria-hidden="true"></div>
+          <div class="license-inner">
+            <div class="license-photo">
+              <img id="license-photo" src="public/photos/pic7.JPG" alt="Photograph of authorized explorer Owen" />
+              <p class="photo-caption">Photograph of authorized explorer Owen</p>
+            </div>
+            <div class="license-info">
+              <h2 class="license-title">PERMANENT LICENSE TO EXPLORE</h2>
+              <p class="license-no" id="license-no">NO. OWN-BDAY-23</p>
+              <dl class="fields">
+                <div>
+                  <dt>Issued to</dt>
+                  <dd class="hand" id="field-name">Owen "Baudelaire" </dd>
+                </div>
+                <div>
+                  <dt>Occasion</dt>
+                  <dd class="hand" id="field-occasion">Trip Around the Sun, Round 23</dd>
+                </div>
+                <div>
+                  <dt>Place of issue</dt>
+                  <dd class="hand" id="field-place">Sibling HQ</dd>
+                </div>
+                <div>
+                  <dt>Date of issue</dt>
+                  <dd class="hand" id="field-date">Today</dd>
+                </div>
+              </dl>
+              <p class="cert">
+                LICENSE TO EXPLORE. This is to Certify that the person named and described
+                above is permitted to celebrate freely and explore another year
+                unless detained by responsibilities.
+              </p>
+              <div class="stamp" aria-hidden="true">CALL ME IF<br />YOU GET FAMOUS</div>
+              <p class="sign-label">Signature of Authorized Explorer</p>
+              <p class="hand signature" id="signature">Owen ✶</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel message-panel" id="message-panel" hidden>
+        <p class="panel-label">EXPLORER'S NOTE</p>
+        <p class="message" id="message" aria-live="polite"></p>
+      </section>
+
+      <section class="trinkets" id="trinkets" hidden>
+        <div class="mini-speaker" aria-hidden="true">
+          <span class="cone"></span>
+          <span class="sparkle sp1"></span>
+          <span class="sparkle sp2"></span>
+          <span class="sparkle sp3"></span>
+          <span class="sparkle sp4"></span>
+          <span class="sparkle sp5"></span>
+          <span class="sparkle sp6"></span>
+        </div>
+
+        <div class="party-cake">
+          <div class="candles" id="candles" aria-label="Birthday candles"></div>
+          <div class="layer top"></div>
+          <div class="layer mid"></div>
+          <div class="layer base"></div>
+          <div class="plate"></div>
+          <p class="cake-hint">tap the candles and make a wish</p>
+        </div>
+
+        <div class="mini-speaker" aria-hidden="true">
+          <span class="cone"></span>
+          <span class="sparkle sp1"></span>
+          <span class="sparkle sp2"></span>
+          <span class="sparkle sp3"></span>
+          <span class="sparkle sp4"></span>
+          <span class="sparkle sp5"></span>
+          <span class="sparkle sp6"></span>
+        </div>
+      </section>
+
+      <section class="panel closer-panel" id="closer-panel" hidden>
+        <p class="panel-label">IMPORTANT</p>
+        <p class="closer-line" id="closer-line"></p>
+      </section>
+
+      <p class="credit">
+        Visual vibe inspired by <em>Call Me If You Get Lost</em> album by Tyler, the Creator.
+      </p>
+    </main>
+
+    <button type="button" class="start-overlay" id="start">
+      <span class="start-chip">
+        <span class="start-chip-label">Validate license</span>
+        <span class="start-chip-sub">sound on and tap to inspect the license before departure</span>
+      </span>
+    </button>
+
+    <audio id="music" loop preload="none"></audio>
+    <audio id="sfx-start" preload="auto"></audio>
+    <audio id="sfx-blow" preload="auto"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="cmiygl.js"></script>
+  </body>
+</html>
