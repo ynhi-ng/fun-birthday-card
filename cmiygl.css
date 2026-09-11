@@ -157,21 +157,76 @@ body.is-locked .paper {
 .license-stars {
   position: absolute;
   inset: 0.55rem;
-  border: 1.5px solid #1a1a1a;
+  border: 1.6px solid #1a1a1a;
   border-radius: 1rem;
   pointer-events: none;
-  background-image: radial-gradient(#1a1a1a 1.1px, transparent 1.2px);
-  background-size: 14px 14px;
-  background-position: 0 0;
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  padding: 0.55rem;
+  z-index: 2;
+}
+
+.star-edge {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #1a1a1a;
+  font-size: 0.78rem;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.star-edge.top {
+  top: -0.42rem;
+  left: 0.95rem;
+  right: 0.95rem;
+}
+
+.star-edge.bottom {
+  bottom: -0.42rem;
+  left: 0.95rem;
+  right: 0.95rem;
+}
+
+.star-edge.left,
+.star-edge.right {
+  top: 0.95rem;
+  bottom: 0.95rem;
+  flex-direction: column;
+  width: 0.85rem;
+}
+
+.star-edge.left {
+  left: -0.42rem;
+}
+
+.star-edge.right {
+  right: -0.42rem;
+}
+
+.license-stars .corner {
+  position: absolute;
+  font-size: 0.78rem;
+  line-height: 1;
+  color: #1a1a1a;
+}
+
+.license-stars .c-tl {
+  top: -0.42rem;
+  left: -0.4rem;
+}
+
+.license-stars .c-tr {
+  top: -0.42rem;
+  right: -0.4rem;
+}
+
+.license-stars .c-bl {
+  bottom: -0.42rem;
+  left: -0.4rem;
+}
+
+.license-stars .c-br {
+  bottom: -0.42rem;
+  right: -0.4rem;
 }
 
 .license-inner {
@@ -541,6 +596,49 @@ body.is-locked .paper {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+.message-panel {
+  position: relative;
+  padding-right: 4.4rem;
+}
+
+.note-headphones {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.9rem;
+  width: 2.6rem;
+  height: 2.15rem;
+}
+
+.hp-band {
+  position: absolute;
+  left: 0.28rem;
+  right: 0.28rem;
+  top: 0.08rem;
+  height: 1.05rem;
+  border: 2.5px solid #1a1a1a;
+  border-bottom: 0;
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+
+.hp-cup {
+  position: absolute;
+  bottom: 0.05rem;
+  width: 0.82rem;
+  height: 1.05rem;
+  border: 2.5px solid #1a1a1a;
+  border-radius: 0.35rem;
+  background: #222;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.hp-left {
+  left: 0;
+}
+
+.hp-right {
+  right: 0;
 }
 
 .message {
