@@ -11,7 +11,6 @@ const CARD = {
   message:
     "Congratulations, you can now say things like `back in my day`. Use this power responsibly.\n\nThis license certifies that you are cleared for another year of BLESS(ED) and LEMONHEAD-level adventures.\n\nThanks for always being there and for putting up with me. Here's to another year of chasing what makes you happy and doing it your own way.\n\nHappy birthday! Keep the sparks! Keep going!",
   closer: "This license grants full freedom to wander, cause chaos, and get lost on purpose.",
-  heroPhoto: "public/photos/pic9.JPG",
   music: "public/music.mp3",
   sfx: {
     start: "public/sfx/stamp.wav",
@@ -27,7 +26,6 @@ const deck = document.getElementById("deck");
 const brandEl = document.getElementById("brand-name");
 const headlineEl = document.getElementById("headline");
 const taglineEl = document.getElementById("tagline");
-const licensePhoto = document.getElementById("license-photo");
 const licenseNo = document.getElementById("license-no");
 const fieldName = document.getElementById("field-name");
 const fieldOccasion = document.getElementById("field-occasion");
@@ -54,7 +52,6 @@ brandEl.textContent = CARD.name;
 headlineEl.textContent = CARD.headline;
 taglineEl.textContent = CARD.tagline;
 closerLine.textContent = CARD.closer;
-licensePhoto.src = CARD.heroPhoto;
 licenseNo.textContent = CARD.licenseNo;
 fieldOccasion.textContent = CARD.occasion;
 fieldPlace.textContent = CARD.place;
