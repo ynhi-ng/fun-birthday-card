@@ -186,22 +186,6 @@ body.is-locked .paper {
   right: 0.95rem;
 }
 
-.star-edge.left,
-.star-edge.right {
-  top: 0.95rem;
-  bottom: 0.95rem;
-  flex-direction: column;
-  width: 0.85rem;
-}
-
-.star-edge.left {
-  left: -0.42rem;
-}
-
-.star-edge.right {
-  right: -0.42rem;
-}
-
 .license-stars .corner {
   position: absolute;
   font-size: 0.78rem;
