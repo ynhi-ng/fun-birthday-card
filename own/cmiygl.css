@@ -222,15 +222,43 @@ body.is-locked .paper {
   padding: 1.35rem 1.25rem 1.2rem;
 }
 
-.license-photo img {
-  display: block;
+.license-photo img,
+.photo-placeholder {
+  display: grid;
+  place-items: center;
   width: 100%;
   aspect-ratio: 1;
+  border: 2px solid #1a1a1a;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      #d9e2d8 0 10px,
+      #cfd9cf 10px 20px
+    );
+}
+
+.license-photo img {
+  display: block;
   object-fit: cover;
   object-position: center 15%;
-  border: 2px solid #1a1a1a;
-  background: #ddd;
   filter: contrast(1.05) saturate(0.95);
+  background: #ddd;
+}
+
+.photo-placeholder {
+  gap: 0.25rem;
+  color: #5a6359;
+}
+
+.photo-placeholder-mark {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.photo-placeholder-text {
+  font-family: var(--type);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
 }
 
 .photo-caption {
@@ -749,6 +777,24 @@ body.is-locked .paper {
 
 .credit em {
   font-style: italic;
+}
+
+.other-link {
+  margin: 0 0 2rem;
+  padding: 0 0.15rem;
+  font-family: var(--type);
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.other-link a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.other-link a:hover {
+  color: var(--red, #c62828);
 }
 
 @media (max-width: 720px) {

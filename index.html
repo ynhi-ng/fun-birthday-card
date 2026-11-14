@@ -2,11 +2,104 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=cmiygl.html" />
-    <link rel="canonical" href="cmiygl.html" />
-    <title>Owen // Call Me If You Get Famous</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Orbitron:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #07080f;
+        --ink: #f0f4ff;
+        --muted: #8a93b0;
+        --cyan: #00f0ff;
+        --magenta: #ff2d95;
+        --green: #3dff7a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        padding: 2rem 1.25rem;
+        background:
+          radial-gradient(ellipse at 20% 20%, rgba(255, 45, 149, 0.18), transparent 45%),
+          radial-gradient(ellipse at 80% 70%, rgba(0, 240, 255, 0.14), transparent 45%),
+          var(--bg);
+        color: var(--ink);
+        font-family: "Chakra Petch", system-ui, sans-serif;
+      }
+      main {
+        width: min(28rem, 100%);
+      }
+      h1 {
+        margin: 0 0 0.4rem;
+        font-family: "Orbitron", system-ui, sans-serif;
+        font-size: clamp(1.4rem, 5vw, 1.9rem);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      p {
+        margin: 0 0 1.5rem;
+        color: var(--muted);
+      }
+      .links {
+        display: grid;
+        gap: 0.85rem;
+      }
+      a {
+        display: block;
+        padding: 1rem 1.15rem;
+        text-decoration: none;
+        color: var(--ink);
+        border: 1px solid rgba(0, 240, 255, 0.35);
+        background: rgba(8, 10, 24, 0.85);
+        clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      a:hover {
+        border-color: var(--magenta);
+        box-shadow: 0 0 22px rgba(255, 45, 149, 0.2);
+      }
+      a strong {
+        display: block;
+        font-family: "Orbitron", system-ui, sans-serif;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+      }
+      a span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      a.own strong {
+        color: var(--green);
+      }
+      a.aei strong {
+        color: var(--cyan);
+      }
+    </style>
   </head>
   <body>
-    <p><a href="cmiygl.html">Open Owen’s birthday license</a></p>
+    <main>
+      <h1>Birthday Cards</h1>
+      <p>Pick a deck.</p>
+      <div class="links">
+        <a class="own" href="own/">
+          <strong>Owen</strong>
+          <span>Chromakopia + Call Me If You Get Famous</span>
+        </a>
+        <a class="aei" href="aei/">
+          <strong>Aeri</strong>
+          <span>Valorant / cyberpunk protocol</span>
+        </a>
+      </div>
+    </main>
   </body>
 </html>
