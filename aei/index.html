@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protocol Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Orbitron:wght@600;700;800&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="void" aria-hidden="true">
+      <div class="skyline"></div>
+      <div class="neon-wash wash-a"></div>
+      <div class="neon-wash wash-b"></div>
+      <div class="scanlines"></div>
+      <div class="halftone"></div>
+      <div class="grain"></div>
+      <div class="hud-grid"></div>
+      <div class="neon-stage" id="neon-stage"></div>
+    </div>
+
+    <div class="intro" id="intro" aria-hidden="true">
+      <p class="intro-tag">OPERATOR LOCK · ENGAGING</p>
+      <div class="intro-stage">
+        <div class="intro-sniper">
+          <span class="barrel"></span>
+          <span class="scope"><i></i></span>
+          <span class="body"></span>
+          <span class="stock"></span>
+          <span class="mag"></span>
+          <span class="muzzle"></span>
+        </div>
+        <div class="intro-shot">
+          <span class="tracer"></span>
+        </div>
+        <div class="intro-target">
+          <span class="ring outer"></span>
+          <span class="ring mid"></span>
+          <span class="ring inner"></span>
+          <span class="arm arm-n"></span>
+          <span class="arm arm-e"></span>
+          <span class="arm arm-s"></span>
+          <span class="arm arm-w"></span>
+          <span class="bull"></span>
+          <span class="impact"></span>
+        </div>
+      </div>
+      <p class="intro-status" id="intro-status">Acquiring target…</p>
+    </div>
+
+    <button type="button" class="mute hidden" id="mute" aria-label="Mute music">
+      Audio live
+    </button>
+
+    <main class="deck locked" id="deck">
+      <section class="hero" id="hero">
+        <p class="show-tag">AGENT FILE · CLASSIFIED · ROUND ACTIVE</p>
+        <h1 class="brand" id="brand-name">Operator</h1>
+        <p class="headline" id="headline">PROTOCOL: BIRTHDAY</p>
+        <p class="tagline" id="tagline">
+          Neon rain. Operator online. Shark buddy locked. One more year — full send.
+        </p>
+
+        <div class="loadout">
+          <div class="piece target" title="Target" aria-hidden="true">
+            <span class="ring outer"></span>
+            <span class="ring mid"></span>
+            <span class="ring inner"></span>
+            <span class="arm arm-n"></span>
+            <span class="arm arm-e"></span>
+            <span class="arm arm-s"></span>
+            <span class="arm arm-w"></span>
+            <span class="bull"></span>
+          </div>
+
+          <div class="piece sniper" title="Operator" aria-hidden="true">
+            <span class="barrel"></span>
+            <span class="scope"><i></i></span>
+            <span class="body"></span>
+            <span class="stock"></span>
+            <span class="mag"></span>
+          </div>
+
+          <button type="button" class="piece neon-cake" id="cake" aria-label="Blow out the birthday candles">
+            <div class="candles" id="candles">
+              <span class="candle lit"><i></i><em class="smoke"></em></span>
+              <span class="candle lit"><i></i><em class="smoke"></em></span>
+              <span class="candle lit"><i></i><em class="smoke"></em></span>
+            </div>
+            <div class="layer top"></div>
+            <div class="layer mid"></div>
+            <div class="layer base"></div>
+            <div class="plate"></div>
+            <span class="cake-hint" id="cake-hint">tap to blow out candles</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="panel message-panel" id="message-panel" hidden>
+        <div class="card-shark" aria-hidden="true">
+          <svg class="shark" viewBox="0 0 160 72" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sharkBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#3a7cff" />
+                <stop offset="100%" stop-color="#1a4db8" />
+              </linearGradient>
+              <linearGradient id="sharkBelly" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#d8dde8" />
+                <stop offset="100%" stop-color="#aeb6c8" />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#sharkBelly)"
+              d="M28 42 C48 58, 95 60, 128 48 L132 42 C110 52, 70 54, 42 46 Z"
+            />
+            <path
+              fill="url(#sharkBlue)"
+              d="M18 36 C22 18, 48 10, 78 12 C108 14, 128 22, 142 34 C130 28, 110 24, 88 24 C60 24, 36 30, 22 40 Z"
+            />
+            <path
+              fill="none"
+              stroke="#cfd5e4"
+              stroke-width="2.2"
+              stroke-linejoin="round"
+              d="M26 40 L34 36 L42 41 L50 35 L58 41 L66 36 L74 41 L82 36 L90 41 L98 37"
+            />
+            <path fill="url(#sharkBlue)" d="M72 14 L82 2 L90 16 Z" />
+            <path fill="url(#sharkBlue)" d="M70 44 L78 58 L88 46 Z" />
+            <path fill="url(#sharkBlue)" d="M138 34 L156 18 L150 36 L156 52 L138 38 Z" />
+            <path fill="none" stroke="#0d1a3a" stroke-width="2" stroke-linecap="round" d="M52 28 C54 32, 54 36, 52 40" />
+            <path fill="none" stroke="#0d1a3a" stroke-width="2" stroke-linecap="round" d="M58 27 C60 31, 60 35, 58 39" />
+            <path fill="none" stroke="#0d1a3a" stroke-width="2" stroke-linecap="round" d="M64 27 C66 31, 66 35, 64 39" />
+            <rect x="36" y="26" width="10" height="5" rx="1" fill="#ffe14a" />
+            <circle cx="76" cy="46" r="3.2" fill="#ff6a1a" />
+            <circle cx="142" cy="36" r="3.2" fill="#ff6a1a" />
+            <circle cx="82" cy="14" r="2.4" fill="#ff6a1a" />
+          </svg>
+        </div>
+        <p class="panel-label">TRANSMISSION · DEDICATION</p>
+        <p class="message" id="message" aria-live="polite"></p>
+      </section>
+
+      <section class="panel closer-panel" id="closer-panel" hidden>
+        <p class="panel-label">ROUND OVER</p>
+        <p class="closer-line" id="closer-line"></p>
+      </section>
+    </main>
+
+    <audio id="music" loop preload="none"></audio>
+    <audio id="sfx-start" preload="auto"></audio>
+    <audio id="sfx-drop" preload="auto"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

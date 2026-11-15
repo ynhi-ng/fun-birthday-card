@@ -1,5 +1,5 @@
 const CARD = {
-  name: "Owen",
+  name: "Explorer",
   headline: "PERMANENT LICENSE TO EXPLORE",
   tagline:
     "Valid for bac xiu, chaos, and full JUGGERNAUT energy.",

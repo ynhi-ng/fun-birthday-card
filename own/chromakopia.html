@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>St. Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="chromakopia.css" />
+  </head>
+  <body>
+    <div class="void" aria-hidden="true">
+      <div class="smoke smoke-a"></div>
+      <div class="smoke smoke-b"></div>
+      <div class="smoke smoke-c"></div>
+      <div class="flare"></div>
+      <div class="bass-viz" id="bass-viz"></div>
+      <div class="grain"></div>
+    </div>
+
+    <button type="button" class="mute hidden" id="mute" aria-label="Mute music">
+      Sound on
+    </button>
+
+    <main class="deck locked" id="deck">
+      <section class="hero" id="hero">
+        <p class="show-tag" id="show-tag">SIDE A · HEAVY BASS · NO DOUBT</p>
+        <h1 class="brand" id="brand-name">Chromakopia</h1>
+        <p class="headline" id="headline">ST. BIRTHDAY</p>
+        <p class="tagline" id="tagline">
+          Green lights. Black smoke. Mic hot. Cake louder than the drop.
+        </p>
+
+        <div class="gear" aria-hidden="true">
+          <div class="speaker speaker-left">
+            <span class="cone"></span>
+            <span class="cone small"></span>
+            <span class="badge">L</span>
+          </div>
+
+          <div class="center-stack">
+            <div class="mic">
+              <span class="grille"></span>
+              <span class="shaft"></span>
+              <span class="cable"></span>
+            </div>
+            <div class="party-cake">
+              <div class="candles">
+                <span class="candle"><i></i></span>
+                <span class="candle"><i></i></span>
+                <span class="candle"><i></i></span>
+              </div>
+              <div class="layer top"></div>
+              <div class="layer mid"></div>
+              <div class="layer base"></div>
+              <div class="plate"></div>
+            </div>
+          </div>
+
+          <div class="speaker speaker-right">
+            <span class="cone"></span>
+            <span class="cone small"></span>
+            <span class="badge">R</span>
+          </div>
+        </div>
+
+        <dl class="meters" aria-label="Stage meters">
+          <div>
+            <dt>STATUS</dt>
+            <dd id="status-value">SMOKE</dd>
+          </div>
+          <div>
+            <dt>BASS</dt>
+            <dd>HEAVY</dd>
+          </div>
+          <div>
+            <dt>MIC</dt>
+            <dd>HOT</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="panel message-panel" id="message-panel" hidden>
+        <p class="panel-label">TRACK 00 · DEDICATION</p>
+        <p class="message" id="message" aria-live="polite"></p>
+      </section>
+
+      <section class="panel archive-panel" id="archive-panel" hidden>
+        <div class="archive-head">
+          <p class="panel-label">ALBUM TRACKLIST</p>
+          <p class="archive-hint" id="archive-hint">Swipe · tap to enlarge</p>
+        </div>
+        <div class="carousel" id="carousel" tabindex="0" aria-label="Album tracklist"></div>
+        <div class="carousel-dots" id="carousel-dots" aria-hidden="true"></div>
+      </section>
+
+      <section class="panel closer-panel" id="closer-panel" hidden>
+        <p class="panel-label">OUTRO</p>
+        <p class="closer-line" id="closer-line"></p>
+      </section>
+
+      <p class="other-link"><a href="cmiygl.html">Call Me If You Get Famous edition →</a></p>
+    </main>
+
+    <button type="button" class="start-overlay" id="start">
+      <span class="start-chip">
+        <span class="start-chip-label">Drop the bass</span>
+        <span class="start-chip-sub">tap to start the birthday set</span>
+      </span>
+    </button>
+
+    <div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">
+        Close
+      </button>
+      <img id="lightbox-img" alt="" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+
+    <audio id="music" loop preload="none"></audio>
+    <audio id="sfx-start" preload="auto"></audio>
+    <audio id="sfx-drop" preload="auto"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="chromakopia.js"></script>
+  </body>
+</html>
