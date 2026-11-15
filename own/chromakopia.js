@@ -7,12 +7,10 @@ const CARD = {
   closer: "That's the set. Blow the candles. Replay the drop.",
   photos: [
     {
-      src: "public/photos/pic7.JPG",
       title: "Main Character",
       caption: "Jersey era. Opening track.",
     },
     {
-      src: "public/photos/pic9.JPG",
       title: "Neon Encore",
       caption: "Bonus track.",
     },
@@ -207,9 +205,11 @@ async function tryPlayMusic() {
 }
 
 function openLightbox(photo, index) {
+  if (!photo.src) return;
+
   const label = photo.title
     ? `Track ${String(index + 1).padStart(2, "0")} — ${photo.title}`
-    : photo.caption || `Photo of ${CARD.name}`;
+    : photo.caption || "Track photo";
   lightboxImg.src = photo.src;
   lightboxImg.alt = label;
   lightboxCaption.textContent = [label, photo.caption].filter(Boolean).join(" · ");
@@ -259,23 +259,43 @@ function buildArchive() {
     return;
   }
 
+  const allPlaceholders = CARD.photos.every((photo) => !photo.src);
+  archiveHint.textContent = allPlaceholders
+    ? "Placeholder tracks"
+    : "Swipe · tap to enlarge";
+
   CARD.photos.forEach((photo, index) => {
     const trackNo = String(index + 1).padStart(2, "0");
     const title = photo.title || `Track ${trackNo}`;
+    const hasPhoto = Boolean(photo.src);
 
     const button = document.createElement("button");
     button.type = "button";
     button.className = "carousel-card";
-    button.setAttribute("aria-label", `Open track ${trackNo}: ${title}`);
+    button.setAttribute(
+      "aria-label",
+      hasPhoto ? `Open track ${trackNo}: ${title}` : `Track ${trackNo}: ${title} (placeholder)`
+    );
+    if (!hasPhoto) button.disabled = true;
 
     const meta = document.createElement("div");
     meta.className = "track-meta";
     meta.innerHTML = `<span>Track ${trackNo}</span><span>3:0${(index % 9) + 1}</span>`;
 
-    const img = document.createElement("img");
-    img.src = photo.src;
-    img.alt = title;
-    img.loading = "lazy";
+    let media;
+    if (hasPhoto) {
+      media = document.createElement("img");
+      media.src = photo.src;
+      media.alt = title;
+      media.loading = "lazy";
+    } else {
+      media = document.createElement("div");
+      media.className = "photo-placeholder";
+      media.setAttribute("role", "img");
+      media.setAttribute("aria-label", "Photo placeholder");
+      media.innerHTML =
+        '<span class="photo-placeholder-mark">★</span><span class="photo-placeholder-text">PHOTO</span>';
+    }
 
     const cap = document.createElement("span");
     cap.className = "cap";
@@ -288,8 +308,10 @@ function buildArchive() {
       cap.append(sub);
     }
 
-    button.append(meta, img, cap);
-    button.addEventListener("click", () => openLightbox(photo, index));
+    button.append(meta, media, cap);
+    if (hasPhoto) {
+      button.addEventListener("click", () => openLightbox(photo, index));
+    }
     carousel.append(button);
 
     const dot = document.createElement("span");

@@ -1,2 +1,3 @@
 # Place compressed birthday photos here (jpg/webp/png).
-# Then list each file in CARD.photos inside script.js.
+# Then add a `src` for each entry in `CARD.photos` inside `chromakopia.js`.
+# Without `src`, tracks render as PHOTO placeholders.

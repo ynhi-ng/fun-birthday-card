@@ -593,13 +593,52 @@ body.is-locked .void {
   color: var(--green-hot);
 }
 
-.carousel-card img {
+.carousel-card img,
+.carousel-card .photo-placeholder {
   display: block;
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   background: #101810;
+}
+
+.carousel-card img {
   filter: saturate(0.92) contrast(1.08);
+}
+
+.carousel-card .photo-placeholder {
+  display: grid;
+  place-items: center;
+  gap: 0.35rem;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(47, 191, 85, 0.18), transparent 55%),
+    linear-gradient(160deg, #0d1510 0%, #101810 55%, #0a100c 100%);
+  border: none;
+  border-block: 1px solid rgba(47, 191, 85, 0.18);
+  color: var(--green-hot);
+  font-family: var(--mono);
+}
+
+.carousel-card .photo-placeholder-mark {
+  font-size: 1.6rem;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.carousel-card .photo-placeholder-text {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.carousel-card:disabled {
+  cursor: default;
+}
+
+.carousel-card:disabled:hover,
+.carousel-card:disabled:focus-visible {
+  border-color: rgba(47, 191, 85, 0.4);
+  transform: none;
 }
 
 .carousel-card .cap {
